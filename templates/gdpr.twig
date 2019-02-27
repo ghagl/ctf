@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+{% block title %}LANCTF / GDPR{% endblock %}
+
+{% block gdpr %}
+{% endblock %}
+
+{% block menulvl %}
+<li><a href="/">Tillbaka</a></li>
+<li><a href="/gdpr" class="active">GDPR</a></li>
+{% endblock %}
+
+{% block lvl %}
+<p>Välkommen till LANCTF.SSIS.NU, utvecklad av Gustaf H. för Togethernet.<br/>
+I enlighet med rådande lagstiftning har vi utformat en integritetspolicy.</p>
+
+<pre>
+	Under din användning av denna tjänst ("LANCTF.SSIS.NU") samlas följande information in av vår infrastrukturleverantör:
+	- IP-adress
+	- User-Agent (webbläsaridentifierare)
+	- Tidpunkt (icke-personlig identifierbar information)
+
+	Ovan nämnda data samlas in av Stockholms stad / Stockholm Science and Innovation School (SSIS).
+	Denna juridiska person är ansvarig för att uppfylla din rätt till att bli bortglömd, m.m., enligt GDPR, gällande ovan nämnda data.
+
+	Följande information samlas in av webbapplikationen:
+	- Aktuell sida för besök (icke-personlig identifierbar information)
+	- Sessionskaka (icke-personlig identifierbar information)
+	- Vilken nivå du befinner dig på, via sessionskakan (icke-personlig identifierbar information)
+
+	Denna insamling sker för att kunna tillhandahålla tjänsten till dig och säkerställa att tävlingen går rätt till.
+	Vi behandlar alla GDPR-förfrågningar skyndsamt.
+
+	Datakontrollant är <a href="https://lan.ssis.nu/">Togethernet</a>.
+</pre>
+
+{% if gdpr == 0 %}
+<form method="POST" action="/gdpr_accept" id="gdprform">
+	<input type="submit" value="Jag är införstådd med och accepterar GDPR-villkoren" id="acceptbtn"/>
+</form>
+{% endif %}
+
+{% endblock %}

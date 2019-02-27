@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block title %}Nivå 2{% endblock %}
+
+{% block lvl %}
+<p>Din flagga (nivå 1): </p><pre>{{flag}}</pre>
+<p>Död och skandal, nu får vi se till att stoppa din framfart...</p><br/>
+
+<div style="display:none;" id="notice"><p style="color: red;">Du kan bättre, min gode!</p><br/></div>
+
+<form action="/level/1" method="post" id="assistant" autocomplete="off">
+	<input type="text" width="30" id="username" name="username" autofocus class="input"/><br/>
+	<input type="password" width="30" id="password" name="password" class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+<script>
+document.getElementById('submitbtn').addEventListener("click", function(uevent) {
+	uevent.preventDefault();
+	if (document.getElementById('username').value == 'kalleanka' && document.getElementById('password').value == 'kajsa') {
+		document.getElementById('assistant').submit();
+	} else {
+		document.getElementById('notice').style = '';
+	}
+});
+</script>
+
+{% endblock %}

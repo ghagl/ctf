@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block aid %}
+<meta name="generator" content="AdenoidChaplinCMS">
+{% endblock %}
+
+{% block title %}Nivå 9{% endblock %}
+
+{% block lvl %}
+<p>Din flagga (nivå 8): </p><pre>{{flag}}</pre>
+<p>Du må vara en vinnare, spirituellt sett, men du behöver också hävda dig... <br/>
+Upp till bevis. Tänk visionärt, stort, svulstigt!</p>
+
+<p>Flagga:</p>
+<form action="/level/8" method="post" autocomplete="off">
+	<input type="text" width="30" name="flag" autofocus class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+{% endblock %}

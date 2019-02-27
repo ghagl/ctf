@@ -1,0 +1,111 @@
+/*
+ * Copyright (C) 2019 Gustaf Haglund
+ * The BSD 3-clause license applies. See the LICENSE file.
+ *
+ */
+
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#menu {
+	width: 100%;
+	border-bottom: 1px solid #FFF;
+	overflow: hidden;
+}
+
+#menu #logo {
+	float: left;
+	margin-left: 10px;
+	font-size: 36px;
+	color: #FFEA01;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 10px;
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+#menu #items {
+	float: right;
+}
+
+#header {
+	list-style-type: none;
+	display: inline-block;
+}
+
+#header > li {
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+#header > li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#header > li a.active {
+	color: #000;
+	background: #FFF;
+	border-radius: 9px;
+	text-decoration: none;
+	padding: 3px;
+}
+
+#header > li a:hover {
+	border-bottom: 1px solid #FFF;
+	font-weight: bold;
+}
+
+.input {
+	border-radius: 9px;
+	background: darkgray;
+	border: 0px;
+}
+
+#submitbtn {
+	border-radius: 3px;
+	background: orange;
+	color: #FFF;
+	border: 1px solid orange;
+}
+
+p, a {
+	color: #FFF;
+}
+
+pre {
+	border: 1px solid darkgray;
+	background: darkgray;
+	color: #000;
+	overflow-y: scroll;
+}
+
+#gdprnotice {
+	border: 1px solid #000;
+	background: lightblue;
+	box-sizing: border-box;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+#gdprform {
+	float: right;
+	display: inline;
+}
+
+#acceptbtn {
+	border: 1px solid darkblue;
+	color: #FFF;
+	border-radius: 3px;
+	background: darkblue;
+}

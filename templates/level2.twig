@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block title %}Nivå 3{% endblock %}
+
+{% block lvl %}
+<p>Din flagga (nivå 2): </p><pre>{{flag}}</pre>
+<p>Jaha. Jag kunde tydligen inte stoppa dig med JS, men det ska vi bli två om... Ta intryck av den här bilden.</p>
+
+<img src="/e42bdb7d41385fd35a3e35cc892052ee37cfeefa1891aa0fe71f630604bdd801.jpg" style="max-width:320px;" alt="Needs More JPEG From Wikimedia" width="500" height="300"/><br/>
+
+<p>Flagga:</p>
+<form action="/level/2" method="post" autocomplete="off">
+	<input type="text" width="30" name="flag" autofocus class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block title %}Nivå 8{% endblock %}
+
+{% block aid %}
+<meta name="generator" content="Wordpress">
+{% endblock %}
+
+{% block lvl %}
+<p>Din flagga (nivå 7): </p><pre>{{flag}}</pre>
+<p>Kakmonstret hade gärna lagt beslag på dina kakor. Åtminstone får du nu hjälpa honom med att komma in på sin server.<br/>
+	Han behöver kunna lägga upp blogginlägg om just kakor. Tyvärr har han varit lite väl hemlig av sig...<br/>
+	Åtminstone vet vi att kakmonstret älskar att använda prefixet <strong>BigCookieBusiness</strong>.
+</p>
+
+<form action="/level/7" method="post" autocomplete="off">
+	<input type="text" width="30" name="username" autofocus class="input"/><br/>
+	<input type="password" width="30" name="password" class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+{% endblock %}

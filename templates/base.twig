@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<link href="/css/ctf.css" rel="stylesheet"></link>
+	<meta charset="utf-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	{% block aid %}
+	{% endblock %}
+</head>
+<body>
+	<div id="container">
+		<div id="menu">
+			<div id="logo">lanctf.ssis.nu</div>
+			<div id="items">
+				<ul id="header">
+					{% block menulvl %}
+					{% for i in 0..lvl %}
+					<li><a href="/level/{{i}}" {% if i == visitedlvl %}class="active"{% endif %}>Nivå {{i+1}}</a></li>
+					{% endfor %}
+					<li><a href="/gdpr">GDPR</a></li>
+					{% endblock %}
+				</ul>
+			</div>
+		</div>
+		{% block gdpr %}
+		{% if gdpr == 0 %}
+		<div id="gdprnotice">
+			Denna sida är utvecklad av Gustaf H. för Togethernet.<br/>
+			Detta innebär att <a href="/gdpr">Togethernets integritetspolicy</a> gäller.<br/>
+			I korthet: sidan samlar in dina framsteg.
+			<form method="POST" action="/gdpr_accept" id="gdprform">
+				<input type="submit" value="OK" title="Jag ger mitt samtycke" id="acceptbtn"/>
+			</form>
+		</div>
+		{% endif %}
+		{% endblock %}
+		{% block lvl %}
+		{% endblock %}
+		{% if visitedlvl < lvl %}
+			<br/><a href="/level/{{lvl}}">Du är behörig till en högre nivå</a>
+		{% endif %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block title %}Nivå 6{% endblock %}
+{% block aid %}
+<!-- The mastermind behind this level: Movitz Sunar -->
+{% endblock %}
+
+{% block lvl %}
+
+<p>Nyckeln är YWxsCnlvdXIKY29va2llcwphcmUKYmVsb25nCnRvCnVz</p>
+<img src="/4555506269_5515869189.jpg" style="max-width: 350px;" alt="Needs More JPEG From Flickr"/>
+
+<p>Nyckel:</p>
+<form action="/level/5" method="post" autocomplete="off">
+	<input type="text" width="30" name="key" autofocus class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+{% endblock %}

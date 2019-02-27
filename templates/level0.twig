@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+{% block title %}Nivå 1{% endblock %}
+
+{% block lvl %}
+<p>Välkommen till denna CTF-utmaning. Det finns flera olika nivåer och efter varje genomförd nivå får du en flagga, om så indirekt eller direkt.<br/>
+Låt oss se om du kan ta dig vidare...
+</p>
+
+<form action="/level/0" method="post" autocomplete="off">
+	<input type="text" width="30" placeholder=" username" name="username" autofocus class="input"/><br/>
+	<input type="password" width="30" placeholder=" ********" name="password" class="input"/><br/><br/>
+	<input type="submit" value="Skicka" id="submitbtn"/>
+</form>
+
+{% endblock %}
